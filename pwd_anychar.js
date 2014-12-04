@@ -1,16 +1,17 @@
    function Mod4Passwd(pinFldID,hpinFldID,theChar)
    {  /* Overview:
            simple alternative to <input type="password" ...
-         uses asteriks, but could be any character
+            hiding character could be any character
          Details:
          transfers data from pinFld to hidden field hpinFld,
-         while making the characters Asteriks in the visible one
+         while turning the characters into theChar in the visible one
           (works well with various input styles)
            use with onkeyup= 
            e.g.
                   onkeyup="Mod4Passwd('pinFld','hpinFld','*');"
           */
      theChar = theChar.slice(0,1);
+     if (theChar.length != 1) theChar = '*';
      var taElem = document.getElementById(pinFldID);
      var htaElem = document.getElementById(hpinFldID);
      
