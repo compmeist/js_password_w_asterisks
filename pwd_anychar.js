@@ -6,9 +6,8 @@
          transfers data from pinFld to hidden field hpinFld,
          while turning the characters into theChar in the visible one
           (works well with various input styles)
-           use with onkeyup= 
-           e.g.
-                  onkeyup="Mod4Passwd('pinFld','hpinFld','*');"
+           use with onkeyup 
+             e.g. <input type="text" onkeyup="Mod4Passwd('pinFld','hpinFld','*');">
           */
      theChar = theChar.slice(0,1);
      if (theChar.length != 1) theChar = '*';
